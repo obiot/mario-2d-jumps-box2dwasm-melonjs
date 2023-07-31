@@ -2,8 +2,7 @@
 --------------------------------------
 a port of the [Mario 2D](https://github.com/obiot/mario-2d-jumps-box2dcore-melonjs) using the WebAssembly version of Box2d, that showcase integration of [melonJS](http://melonjs.org) with [box2d-wasm](https://github.com/Birch-san/box2d-wasm).
 
-<img width="640" alt="Screenshot 2023-07-28 at 10 27 46 AM" src="https://github.com/obiot/mario-2d-jumps-box2dcore-melonjs/assets/4033090/231efde4-5906-403a-8392-ae48ff071df8">
-
+<img width="640" alt="Screenshot 2023-07-31 at 10 12 11 AM" src="https://github.com/obiot/mario-2d-jumps-box2dwasm-melonjs/assets/4033090/59537bfb-ec8b-4106-9d38-a0a49cad6149">
 
 Description
 -------------------------------------------------------------------------------
