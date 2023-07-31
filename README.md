@@ -1,80 +1,44 @@
-# melonJS ES6 Webpack Boilerplate
-![melonJS Logo](https://github.com/melonjs/melonJS/raw/master/media/Banner/Banner%20-%20Billboard%20-%20Original%20Logo%20-%20horizontal.png)
+# Mario 2D Jumps (melonJS/Box2Dwasm edition)
+--------------------------------------
+a port of the [Mario 2D](https://github.com/obiot/mario-2d-jumps-box2dcore-melonjs) using the WebAssembly version of Box2d, that showcase integration of [melonJS](http://melonjs.org) with [box2d-wasm](https://github.com/Birch-san/box2d-wasm).
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/melonjs/es6-boilerplate/blob/master/LICENSE)
+<img width="640" alt="Screenshot 2023-07-28 at 10 27 46 AM" src="https://github.com/obiot/mario-2d-jumps-box2dcore-melonjs/assets/4033090/231efde4-5906-403a-8392-ae48ff071df8">
 
-A simple ES6 Webpack based boilerplate to create games with [melonJS](https://github.com/melonjs/melonJS), built with :
-- [melonJS 2](https://github.com/melonjs/melonJS)
-- [ECMAScript 6](http://es6-features.org) structure and semantic
-- [Webpack](https://webpack.js.org/guides)
-- [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) plugin for local development
-- [Hot Reloading](https://webpack.js.org/concepts/hot-module-replacement) dev server
-- Basic Asset Build [management](https://webpack.js.org/plugins/copy-webpack-plugin/)
-- Minification and Transpiling to ES5 using [Babel](https://babeljs.io/docs/setup/#installation)
-- Favicon support using the [favicons Webpack Plugin](https://www.npmjs.com/package/favicons-webpack-plugin)
-- melonJS [debug plugin](https://github.com/melonjs/debug-plugin) to display stats on number of objects, memory usage, draw time, frame rate, etc...
 
-## Prerequisites
-
-Ensure you have [Node.js](http://nodejs.org/) installed, then install all the build dependencies in the folder where you cloned the repository :
-
-    $ [sudo] npm install
-
-## Usage
-
-- `npm run dev` to start the dev server on watch mode at `localhost:9000`.
-- `npm run build` to generate a minified, production-ready build, in the `public` folder
-
-if everything goes well, on running the dev server for the first time you should see this :
-![boilerplate-helloworld](https://user-images.githubusercontent.com/4033090/134762171-6e1fac3d-8b41-4665-890b-daa217ba61dc.png)
-
-> Note: when generating the production build, Webpack will attempt to filter files under the data folder to only copy final assets and ignore project files (e.g. .ftpp project files from Free Texture Packer). If you find your file being wrongly ignore you can easily add the corresponding extension in the [webpack.config.js](webpack.config.js) file
-
-## Folder structure
-
-```none
-src
-└── data
-│    ├── bgm
-│    ├── fnt
-|    ├── img
-|    ├── map
-|    └── sfx
-└── js
-|    ├── renderables
-|    └── stage
-├── index.js
-├── index.css
-├── index.html
-├── manifest.js
-public
-├── data
-├── bundle.js
-└── index.html
-```
-
-- `src`
-  - the root folder for your game source code
-  - The entry file is [index.js](src/index.js).
-  - [index.css](src/index.css) and [index.html](src/index.html) are default templates that can be customized
-  - [manifest.js](src/manifest.js) is a list of asset to be preloaded by melonJS
-- `src/js`
-  - add your source classes here
-- `src/data`
-  - where to add your game assets
-- `public`
-  - where the production-ready build files will be copied/generated when using `npm run build`
-
-Debug plugin
+Description
 -------------------------------------------------------------------------------
-The boilerplate include the melonJS plugin, and will automatically import and instantiate it when running under a development environement.
+a tiny mario 2d platformer game built with [melonJS](http://melonjs.org) and the [@box2d/core](https://lusito.github.io/box2d.ts/) physics engine that showcase key features of melonJS :
+* WebGL rendering
+* integration with Box2D (WebAssembly version) physics engine (as part of this demo)
+* Tilemap integration
+* Texture packing
+* Bitmap Font
 
-the Debug Panel is hidden by default and can be displayed using the "S" key, see [here](https://github.com/melonjs/debug-plugin/blob/main/README.md) for more details about the plugin.
-
-
-Questions, need help ?
+Building the demo
 -------------------------------------------------------------------------------
-If you need technical support, you can contact us through the following channels :
-* Forums: with melonJS 2 we moved to a new discourse [forum](https://melonjs.discourse.group), but we can still also find the previous one [here](http://www.html5gamedevs.com/forum/32-melonjs/)
-* Chat: come and chat with us on [discord](https://discord.gg/aur7JMk)
-* we tried to keep our [wikipage](https://github.com/melonjs/melonJS/wiki) up-to-date with useful links, tutorials, and anything related melonJS.
+
+If you wish to build the demo and expand on the current features, you will need to install :
+
+- The [Node.js](http://nodejs.org/) JavaScript runtime and the [NPM](https://npmjs.org/) package manager
+
+then 
+- `npm run dev` to start the dev server on watch mode at `localhost:9000`
+- `npm run build` to generate a minified, production-ready build, in the docs folder
+
+> Note: building the project under the `docs` folder will trigger the workflow for the GitHub Pages deployment.
+
+To Do List
+-------------------------------------------------------------------------------
+- fix jumping issue (see [#1](https://github.com/obiot/mario-2d-jumps-box2dcore-melonjs/issues/1)) ironically !
+- add enemies and collectables with proper contact/collision handling
+- add parallax background and other details to the mini level
+
+Credits
+-------------------------------------------------------------------------------
+- [8observer8](https://8observer8.github.io) for the original demo
+- [8observer8](https://github.com/8Observer8/falling-box-contact-listener-user-data-box2dwasm-melonjs-js) for the Debug Drawer, Contact Listener and User Data demos with melonJS.
+- [melonJS](http://melonjs.org) for the game engine
+- [box2d-wasm](https://www.npmjs.com/package/box2d-wasm) Box2D compiled to WebAssembly
+- [Tiled](https://www.mapeditor.org/) for the map editor
+- [FreeTexturePacker](http://free-tex-packer.com) for the free texture packer
+- [SnowB](https://snowb.org) for the BitmapFont editor
