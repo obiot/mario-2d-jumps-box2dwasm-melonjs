@@ -11,27 +11,25 @@ class PlayScreen extends Stage {
         // load a level
         level.load("simple-level");
 
-        if (process.env.NODE_ENV === 'development') {
-            // check the checkbox to show/hide colliders
-            this.colliderCheckBox = document.getElementById("colliderCheckBox");
-            this.showColliders = false;
-            if (this.colliderCheckBox !== null) {
+        // check the checkbox to show/hide colliders
+        this.colliderCheckBox = document.getElementById("colliderCheckBox");
+        this.showColliders = false;
+        if (this.colliderCheckBox !== null) {
+            this.showColliders = this.colliderCheckBox.checked;
+            this.colliderCheckBox.onchange = () => {
                 this.showColliders = this.colliderCheckBox.checked;
-                this.colliderCheckBox.onchange = () => {
-                    this.showColliders = this.colliderCheckBox.checked;
-                    // force repaint
-                    game.repaint();
-                };
-            }
-            // instantiate a debugDrawer
-            this.debugDrawer = new DebugDrawer(game.renderer);
-            GetWorld().SetDebugDraw(this.debugDrawer.instance);
-            event.on(event.GAME_AFTER_DRAW, () => {
-                if (this.showColliders === true) {
-                    GetWorld().DebugDraw();
-                }
-            });
+                // force repaint
+                game.repaint();
+            };
         }
+        // instantiate a debugDrawer
+        this.debugDrawer = new DebugDrawer(game.renderer);
+        GetWorld().SetDebugDraw(this.debugDrawer.instance);
+        event.on(event.GAME_AFTER_DRAW, () => {
+            if (this.showColliders === true) {
+                GetWorld().DebugDraw();
+            }
+        });
 
         // create a font
         this.title = new BitmapText(160, 32, {
