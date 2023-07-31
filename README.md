@@ -6,7 +6,7 @@ a port of the [Mario 2D](https://github.com/obiot/mario-2d-jumps-box2dcore-melon
 
 Description
 -------------------------------------------------------------------------------
-a tiny mario 2d platformer game built with [melonJS](http://melonjs.org) and the [@box2d/core](https://lusito.github.io/box2d.ts/) physics engine that showcase key features of melonJS :
+a tiny mario 2d platformer game built with [melonJS](http://melonjs.org) and the [box2d-wasm](https://github.com/Birch-san/box2d-wasm) physics engine that showcase key features of melonJS :
 * WebGL rendering
 * integration with Box2D (WebAssembly version) physics engine (as part of this demo)
 * Tilemap integration
