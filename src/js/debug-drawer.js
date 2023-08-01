@@ -23,7 +23,7 @@ export default class DebugDrawer {
                 wrapPointer(array_p + index * sizeOfElement, ctor)
             );
 
-        self = this;
+        const self = this;
         const debugDrawer = Object.assign(new JSDraw(), {
             DrawSegment(vert1_p, vert2_p, color_p) {},
             DrawPolygon(vertices_p, vertexCount, color_p) {},
