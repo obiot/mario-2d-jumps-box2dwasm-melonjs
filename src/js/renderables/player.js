@@ -125,7 +125,7 @@ class PlayerEntity extends Renderable {
             getPointer,
             wrapPointer
         } = box2d;
-        console.log("begin contact");
+        
         contact = wrapPointer(contact, b2Contact);
         const fixtureA = contact.GetFixtureA();
         const fixtureB = contact.GetFixtureB();
