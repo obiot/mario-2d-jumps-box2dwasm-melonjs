@@ -42,10 +42,10 @@ class PlayerEntity extends Renderable {
         // create the physic body
         this.playerBody = createDynamicBody(this.pos.x + this.sprite.width / 2, this.pos.y + this.sprite.height / 2);
         this.playerBody.SetLinearDamping(1);
-        //this.playerBody.SetFixedRotation(true);
+        this.playerBody.SetFixedRotation(true);
 
         // create the physic body shape based on the renderable size
-        this.playerFixture = this.playerBody.CreateFixture(createCircleShape(7), .1);
+        this.playerFixture = this.playerBody.CreateFixture(createCircleShape(7), 1);
         this.playerFixture.SetRestitution(0);
 
         // set "player" as metadata
@@ -61,7 +61,7 @@ class PlayerEntity extends Renderable {
      */
     update(dt) {
         
-        const vel = this.playerBody.GetLinearVelocity();
+        let vel = this.playerBody.GetLinearVelocity();
 
         if (input.isKeyPressed("left") && !this.touchLeft) {            
             vel.x = -1;
@@ -74,7 +74,7 @@ class PlayerEntity extends Renderable {
         }
         
         if (input.isKeyPressed("jump")) {
-            vel.y = -50;
+            vel.y = -5000;
             this.currentPlayerState = playerStates.jump;
         }
 
@@ -138,10 +138,10 @@ class PlayerEntity extends Renderable {
             const vel = this.playerBody.GetLinearVelocity();
             if (vel.x < 0) {
                 this.touchLeft = true;
-                vel.x = 0;
+                //vel.x = 0;
             } else if (vel.x > 0) {
                 this.touchRight = true;
-                vel.x = 0;
+                //vel.x = 0;
             }
             this.playerBody.SetLinearVelocity(vel);
         }
