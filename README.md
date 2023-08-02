@@ -1,6 +1,6 @@
 # Mario 2D Jumps (melonJS/Box2Dwasm edition)
 --------------------------------------
-a port of the [Mario 2D @box2d/cpre Demo](https://github.com/obiot/mario-2d-jumps-box2dcore-melonjs) using the WebAssembly version of Box2d, that showcase integration of [melonJS](http://melonjs.org) with [box2d-wasm](https://github.com/Birch-san/box2d-wasm).
+a port of the [Mario 2D @box2d/core Demo](https://github.com/obiot/mario-2d-jumps-box2dcore-melonjs) using the WebAssembly version of Box2d, that showcase integration of [melonJS](http://melonjs.org) with [box2d-wasm](https://github.com/Birch-san/box2d-wasm).
 
 ![mario-2d-demos-box2dwasm-melonjs](https://github.com/obiot/mario-2d-jumps-box2dwasm-melonjs/assets/4033090/18cd8255-172f-4340-99c6-78e430a0ac37)
 
