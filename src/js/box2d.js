@@ -23,8 +23,11 @@ export function initBox2D(localhost = true) {
             box2d = Box2D;
 
             const { b2World, b2Vec2 } = box2d;
+            const gravity = new b2Vec2(0, 9.8);
+            
             // create the b2World
-            world  = new b2World(new b2Vec2(0, 10));
+            world = new b2World();
+            world.SetGravity(gravity);
             
             // update the box2D world every frame
             event.on(event.GAME_AFTER_UPDATE, (dt) => {

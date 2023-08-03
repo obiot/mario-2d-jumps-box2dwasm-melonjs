@@ -19,9 +19,8 @@ class b2Collider extends Renderable {
         this.colliderBody = createStaticBody(this.pos.x + w / 2, this.pos.y + h / 2);
         
         // collider fixture
-        this.fixture = this.colliderBody.CreateFixture(createBoxShape(w, h), 0.0);
-        this.fixture.SetFriction(0);
-        this.fixture.SetRestitution(0);
+        this.fixture = this.colliderBody.CreateFixture(createBoxShape(w, h), 0);
+        //this.fixture.SetFriction(3);
 
         // set the collider name as metadata
         this.metaData = setUserData(this.fixture, settings.name);
