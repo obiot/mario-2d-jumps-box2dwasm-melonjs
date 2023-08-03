@@ -87,7 +87,7 @@ class PlayerEntity extends Renderable {
 
         let vel = this.playerBody.GetLinearVelocity();
 
-        if (vel.x === 0 && vel.x === 0) {
+        if (vel.x === 0 && vel.y === 0) {
             this.currentPlayerState = playerStates.idle;
         };
 
