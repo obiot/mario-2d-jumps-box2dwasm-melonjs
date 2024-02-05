@@ -29,7 +29,7 @@
     "box2d-wasm": "^7.0.0",
     "core-js": "^3.31.1",
     "css-loader": "^6.8.1",
-    "melonjs": "^15.8.0",
+    "melonjs": "^16.0.0",
     "style-loader": "^3.3.3"
   }
 }
